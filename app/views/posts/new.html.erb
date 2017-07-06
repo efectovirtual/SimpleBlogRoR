@@ -1,0 +1,17 @@
+<h1>New post</h1>
+
+<%= form_for @post, url: user_posts_path(current_user), class: 'new_post' do |f| %>
+
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content, "Message" %>
+  <%= f.text_area :content %>
+
+  <%= f.submit "Create Post", :disable_with => 'Creating...' %>
+ 
+<% end %>
+
+<script>
+  new PostView()
+</script>
